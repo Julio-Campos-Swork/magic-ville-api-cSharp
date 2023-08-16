@@ -1,3 +1,4 @@
+using MagicVille_Api;
 using MagicVille_Api.Datos;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
     //mediante la opcion de la configuracion indicamos que usaremos en este caso sqlserver y leemos el archiv configuracion para obtener la cadena de configuracion
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+//servicio para lel mapeo
+builder.Services.AddAutoMapper(typeof(MappingConfig));
+
 
 var app = builder.Build();
 
