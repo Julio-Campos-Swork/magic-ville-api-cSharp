@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MagicVille_Api.props" />
+</Project>
